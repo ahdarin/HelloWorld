@@ -20,7 +20,9 @@ public class Myname {
 			System.out.println("Wah! Tanggal ulang tahun kita sama!");
 			
 			} else if (tanggal>31) {
-				System.out.println("Terserah kau lah babi");
+				System.out.println("Kau ulang tahun tanggal "+ tanggal +"? Terserah kau lah babi!");
+		} else if (tanggal<=0) {
+			System.out.println("Kau ulang tahun tanggal "+ tanggal +"? Otak kau minus!");
 		} else {
 			System.out.println("Ulang tahunmu tanggal " + tanggal + " ya? Kalau aku tanggal 25.");
 		}
