@@ -23,7 +23,7 @@ public class methoduntukuapbilangankomputer {
 		return biner;
 	}
 	
-	public int D2O (int x) {
+	public static int D2O (int x) {
 	    int oktal=0,i=1, a;
 	    while (x != 0) {
 	        a = x % 8;
@@ -89,5 +89,9 @@ public class methoduntukuapbilangankomputer {
 		copybiner/=10;
 	}
 	return isBiner;
+	}
+	public static void main(String[] args) {
+		int a = D2O(16);
+		System.out.println(a);
 	}
 }
