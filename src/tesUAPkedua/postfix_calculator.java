@@ -22,13 +22,11 @@ public class postfix_calculator extends JFrame {
 	private JTextField TextInput;
 	private JTable table;
 	JLabel lblHasil;
-	algoritmapostfix postfix = new algoritmapostfix();
 	String input;
 	int hasil;
 	JButton btnSimpan;
 	Queue<String> qInp = new LinkedList<String>();
 	Queue<Integer> qOutp = new LinkedList<Integer>();
-	sorting sort = new sorting();
 
     
     List<sorting.InputOutputPair> pairs = new ArrayList<>();
@@ -80,7 +78,7 @@ public class postfix_calculator extends JFrame {
 		btnProses.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input = TextInput.getText();
-				hasil = postfix.postfixEvaluate(input);
+				hasil = algoritmapostfix.postfixEvaluate(input);
 				lblHasil.setText("Hasil : " + hasil);
 				btnSimpan.setEnabled(true);
 			}
@@ -130,7 +128,7 @@ public class postfix_calculator extends JFrame {
 		JButton btnUrutkan = new JButton("URUTKAN");
 		btnUrutkan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				sort.bubbleSort(pairs);
+				sorting.bubbleSort(pairs);
 				DefaultTableModel model = (DefaultTableModel) table.getModel();
 				model.setRowCount(1);
 				for(sorting.InputOutputPair pair : pairs)

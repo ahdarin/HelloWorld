@@ -1,10 +1,9 @@
 package tesUAPkedua;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class sorting {
-
+  
     public static class InputOutputPair {
         String input;
         int output;
